@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"net/url"
 )
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
@@ -31,12 +32,15 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fileserver := http.FileServer(http.Dir("./static"))
+	fileserver := http.FileServer(http.Dir("./public"))
 	http.Handle("/", fileserver)
 	http.HandleFunc("/form", formHandler)
 	http.HandleFunc("/hello", helloHandler)
 
-	fmt.Printf("Starting server port 3080\n")
+	parsedUrl, _ := url.Parse("http://localhost:3080/")
+	fmt.Println("\n Starting server at")
+	fmt.Println("\n", parsedUrl)
+
 	if err := http.ListenAndServe(":3080", nil); err != nil {
 		log.Fatal(err)
 	}

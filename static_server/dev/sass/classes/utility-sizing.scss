@@ -1,0 +1,58 @@
+$sizes: (
+  "auto": "auto",
+  "fit": "fit-content",
+  "min": "min-content",
+  "max": "max-content",
+  "0": "0",
+  "25": "25%",
+  "50": "50%",
+  "75": "75%",
+  "100": "100%",
+
+  "8ch": "8ch",
+  "10ch": "10ch",
+  "12ch": "12ch",
+  "14ch": "14ch",
+  "16ch": "16ch",
+  "24ch": "24ch",
+  "32ch": "32ch",
+  "48ch": "48ch",
+  "56ch": "56ch",
+  "64ch": "64ch",
+  "72ch": "72ch",
+  "88ch": "88ch",
+  "92ch": "92ch",
+  "108ch": "108ch",
+  "116ch": "116ch",
+
+  "25vh": "25vh",
+  "50vh": "50vh",
+  "75vh": "75vh",
+  "100vh": "100vh",
+
+  "25vw": "25vw",
+  "50vw": "50vw",
+  "75vw": "75vw",
+  "100vw": "100vw",
+);
+
+@each $name, $value in $sizes {
+  .w-#{$name}-min {
+    min-width: #{$value};
+  }
+  .w-#{$name} {
+    width: #{$value};
+  }
+  .w-#{$name}-max {
+    max-width: #{$value};
+  }
+  .h-#{$name}-min {
+    min-height: #{$value};
+  }
+  .h-#{$name} {
+    height: #{$value};
+  }
+  .h-#{$name}-max {
+    max-height: #{$value};
+  }
+}

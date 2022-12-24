@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" >
+  </head>
+  <body>
+    <header id="header" class="bg-complementary">
+      <container class="container flex column gap-6xl py-xl">
+        <nav />
+        <div class="w-48ch pb-6xl">
+          <h1 class="color-primary">Min Design System</h1>
+          <p class="color-primary">
+            This CSS framework was designed with as little code as possible to
+            provide a modern look and feel to any project without sacrificing
+            hours of work for developers and reducing bandwidth consumption for
+            users.
+          </p>
+        </div>
+      </container>
+    </header>
+    <main>
+      <container class="container">
+        <section>
+          <h2 class="color-complementary">Typography</h2>
+          <grid class="grid grid-cols-2 gap-column-6xl gap-row-xl">
+            <div>
+              <h4>Headings</h4>
+              <hr />
+              <hgroup>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+              </hgroup>
+            </div>
+
+            <div>
+              <h4>Paragraphs &amp; Misc</h4>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet,
+                <a arial-label="link" href="#" title="test link">test link</a>
+                adipiscing elit. <em>emphasis</em> consectetuer adipiscing elit.
+                Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam
+                sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec,
+                gravida vehicula, nisl. Praesent mattis, massa quis luctus
+                fermentum, <strong>bold</strong> mi volutpat justo, eu volutpat
+                enim diam eget metus. Maecenas ornare tortor. Donec sed tellus
+                eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam
+                sem, consequat at, commodo vitae, feugiat in, nunc.
+                <q>Donec sed tellus eget sapien fringilla nonummy</q>
+              </p>
+              <p>
+                Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet,
+                consectetuer adipiscing elit. Nullam dignissim convallis est.
+                Quisque aliquam. <cite>cite html tag demostration</cite>. Nunc
+                iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi,
+                imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent
+                mattis, <code>inline code block</code> fermentum, turpis mi
+                volutpat justo, eu volutpat enim diam eget metus. Maecenas
+                ornare tortor. Donec sed tellus eget sapien fringilla nonummy.
+                <acronym title="National Basketball Association">NBA</acronym>
+                Mauris a ante. Suspendisse quam sem, consequat at, commodo
+                vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+                <abbr title="Avenue">AVE</abbr>
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
+                dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc
+                iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi,
+                imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent
+                mattis, massa quis luctus fermentum, turpis mi volutpat justo,
+                eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec
+                sed tellus eget sapien fringilla nonummy.
+                <acronym title="National Basketball Association">NBA</acronym>
+                Mauris a ante. Suspendisse quam sem, consequat at, commodo
+                vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+                <abbr title="Avenue">AVE</abbr>
+              </p>
+            </div>
+
+            <div>
+              <h4>Lists</h4>
+              <hr />
+              <grid class="grid grid-cols-3 gap-lg">
+                <div class="w-100">
+                  <label class="block nowrap">Definition List</label>
+                  <dl>
+                    <dt>List Item 1</dt>
+                    <dd>List item 1 description.</dd>
+                    <dt>List Item 2</dt>
+                    <dd>List item 2 description.</dd>
+                    <dt>List Item 3</dt>
+                    <dd>List item 3 description.</dd>
+                  </dl>
+                </div>
+                <div class="w-100">
+                  <label class="block nowrap">Ordered List</label>
+                  <ol>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                  </ol>
+                </div>
+                <div class="w-100">
+                  <label class="block nowrap">Unordered List</label>
+                  <ul>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                  </ul>
+                </div>
+              </grid>
+            </div>
+
+            <div>
+              <h4>Blockquotes</h4>
+              <hr />
+              <blockquote>
+                This stylesheet is going to help so freaking much.
+                <cite>Cite tag inside a Blockquote tag</cite>
+              </blockquote>
+            </div>
+
+            <div>
+              <h4>Details - Summary</h4>
+              <hr />
+              <details open>
+                <summary>System Requirements</summary>
+                <p>
+                  Requires a computer running an operating system. The computer
+                  must have some memory and ideally some kind of long-term
+                  storage. An input device as well as some form of output device
+                  is recommended.
+                </p>
+              </details>
+            </div>
+
+            <div>
+              <h4>Images &amp; Media</h4>
+              <hr />
+              <figure>
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"
+                ></iframe>
+              </figure>
+              <figure>
+                <img
+                  src="https://images.unsplash.com/photo-1669403337099-5ebd653cc99b"
+                  alt="thumbnail"
+                />
+              </figure>
+              <figure>
+                <video controls>
+                  <source
+                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+                    type="video/webm"
+                  />
+
+                  <source
+                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                    type="video/mp4"
+                  />
+
+                  Download the
+                  <a
+                    href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+                    >WEBM</a
+                  >
+                  or
+                  <a
+                    href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                    >MP4</a
+                  >
+                  video.
+                </video>
+              </figure>
+              <figure>
+                <figcaption>Listen to the T-Rex:</figcaption>
+                <audio
+                  controls
+                  src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+                >
+                  <a
+                    href="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+                  >
+                    Download audio</a
+                  >
+                </audio>
+              </figure>
+            </div>
+          </grid>
+        </section>
+      </container>
+
+      <container class="container">
+        <section>
+          <h2 class="color-complementary">Form Elements</h2>
+
+          <form>
+            <section>
+              <grid class="grid grid-cols-2 gap-column-6xl gap-row-xl">
+                <div>
+                  <fieldset>
+                    <label class="block color-grayscale--5">buttons</label>
+                    <button aria-label="btn">Plain</button>
+                    <button aria-label="btn" type="button">button</button>
+                    <button aria-label="btn" type="reset">Reset</button>
+                    <button aria-label="btn" type="submit">Submit</button>
+                  </fieldset>
+                </div>
+                <div>
+                  <fieldset>
+                    <label class="block color-grayscale--5">Input button</label>
+                    <input
+                      type="button"
+                      value="button"
+                      aria-label="input button"
+                    />
+                    <input
+                      type="reset"
+                      value="Reset"
+                      aria-label="reset input button"
+                    />
+                    <input
+                      type="submit"
+                      value="Submit"
+                      aria-label="submit input button"
+                    />
+                  </fieldset>
+                </div>
+              </grid>
+            </section>
+
+            <section>
+              <grid class="grid grid-cols-2 gap-column-6xl gap-row-xl">
+                <div>
+                  <fieldset>
+                    <label class="block color-grayscale--5">Single Radio</label>
+                    <p class="flex align-items-center gap-xs">
+                      <input
+                        type="radio"
+                        name="radio-example-1"
+                        aria-label="radio-example-1"
+                      />
+                      <label>Radio #0</label>
+                    </p>
+                  </fieldset>
+
+                  <fieldset>
+                    <label class="block color-grayscale--5"
+                      >Multiple Radios</label
+                    >
+                    <p class="flex align-items-center gap-xs">
+                      <label>Radio #1</label>
+                      <input
+                        type="radio"
+                        name="radio-example-2"
+                        aria-label="radio-example-2"
+                      />
+                    </p>
+                    <p class="flex align-items-center gap-xs">
+                      <label>Radio #2</label>
+                      <input
+                        type="radio"
+                        name="radio-example-2"
+                        aria-label="radio-example-2"
+                      />
+                    </p>
+                    <p class="flex align-items-center gap-xs">
+                      <label>Radio #3</label>
+                      <input
+                        type="radio"
+                        name="radio-example-2"
+                        aria-label="radio-example-2"
+                      />
+                    </p>
+                  </fieldset>
+                </div>
+
+                <div>
+                  <fieldset>
+                    <label class="block color-grayscale--5"
+                      >Single Checkbox</label
+                    >
+                    <p class="flex align-items-center gap-xs">
+                      <input
+                        type="checkbox"
+                        name="checkboxes-example-1"
+                        aria-label="checkboxes-example-1"
+                      />
+                      <label>Check #1</label>
+                    </p>
+                  </fieldset>
+
+                  <fieldset>
+                    <label class="block color-grayscale--5"
+                      >Multiple Checkboxes</label
+                    >
+                    <p class="flex align-items-center gap-xs">
+                      <label>Check #1</label>
+                      <input
+                        type="checkbox"
+                        name="checkboxes-example-2"
+                        aria-label="checkboxes-example-2"
+                      />
+                    </p>
+                    <p class="flex align-items-center gap-xs">
+                      <label>Check #1</label>
+                      <input
+                        type="checkbox"
+                        name="checkboxes-example-2"
+                        aria-label="checkboxes-example-2"
+                      />
+                    </p>
+                    <p class="flex align-items-center gap-xs">
+                      <label>Check #3</label>
+                      <input
+                        type="checkbox"
+                        name="checkboxes-example-2"
+                        aria-label="checkboxes-example-2"
+                      />
+                    </p>
+                  </fieldset>
+                </div>
+              </grid>
+            </section>
+
+            <section>
+              <grid class="grid grid-cols-2 gap-column-6xl gap-row-xl">
+                <div>
+                  <fieldset>
+                    <label class="block color-grayscale--5"
+                      >Text based inputs</label
+                    >
+                    <p>
+                      <label class="block">Search</label>
+                      <input type="search" aria-label="input search" />
+                    </p>
+                    <p>
+                      <label class="block">Text</label>
+                      <input type="text" aria-label="input text" />
+                    </p>
+                    <p>
+                      <label class="block">Email</label>
+                      <input type="email" aria-label="input email" />
+                    </p>
+                    <p>
+                      <label class="block">Password</label>
+                      <input type="password" aria-label="input password" />
+                    </p>
+                    <p>
+                      <label class="block">Telephone</label>
+                      <input type="tel" aria-label="input tel" />
+                    </p>
+                    <p>
+                      <label class="block">Textarea</label>
+                      <textarea></textarea>
+                    </p>
+                  </fieldset>
+                </div>
+                <div>
+                  <fieldset>
+                    <label class="block color-grayscale--5"
+                      >Picker inputs</label
+                    >
+                    <p>
+                      <label class="block">File</label>
+                      <input type="file" aria-label="input file" />
+                    </p>
+                    <p>
+                      <label class="block">Color</label>
+                      <input type="color" aria-label="input color" />
+                    </p>
+                    <p>
+                      <label class="block">Date</label>
+                      <input type="date" aria-label="input date" />
+                    </p>
+                    <p>
+                      <label class="block">Datetime Local</label>
+                      <input
+                        type="datetime-local"
+                        aria-label="input datetime-local"
+                      />
+                    </p>
+                    <p>
+                      <label class="block">Month</label>
+                      <input type="month" aria-label="input month" />
+                    </p>
+                    <p>
+                      <label class="block">Week</label>
+                      <input type="week" aria-label="input week" />
+                    </p>
+                  </fieldset>
+                </div>
+              </grid>
+            </section>
+          </form>
+        </section>
+      </container>
+      <container class="container">
+        <section>
+          <h2 class="color-complementary" id="tables">Tables</h2>
+          <hr />
+          <table>
+            <tbody>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Last name</th>
+                <th>Time zone</th>
+                <th>1st Attempt</th>
+                <th>1st Attempt - Comment</th>
+                <th>1st Attempt - Date</th>
+                <th>Best time to call back</th>
+                <th class="text-left">Options</th>
+              </tr>
+
+              <tr>
+                <td>
+                  <button aria-label="btn">
+                    <i class="uil-copy m-auto font-sm cursor-pointer"></i>
+                  </button>
+                  <span>1873376</span>
+                </td>
+                <td>Gary</td>
+                <td>Torres</td>
+                <td>PST</td>
+                <td>done</td>
+                <td>left vm, sent SMS and WCA email</td>
+                <td>10/16/2022</td>
+                <td>3pm</td>
+
+                <td class="font-center">
+                  <button aria-label="btn">
+                    <i class="uil-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <button aria-label="btn">
+                    <i class="uil-copy m-auto font-sm cursor-pointer"></i>
+                  </button>
+                  <span>1873376</span>
+                </td>
+                <td>Gary</td>
+                <td>Torres</td>
+                <td>PST</td>
+                <td>done</td>
+                <td>left vm, sent SMS and WCA email</td>
+                <td>10/16/2022</td>
+                <td>3pm</td>
+
+                <td class="font-center">
+                  <button aria-label="btn">
+                    <i class="uil-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <button aria-label="btn">
+                    <i class="uil-copy m-auto font-sm cursor-pointer"></i>
+                  </button>
+                  <span>1873376</span>
+                </td>
+                <td>Gary</td>
+                <td>Torres</td>
+                <td>PST</td>
+                <td>done</td>
+                <td>left vm, sent SMS and WCA email</td>
+                <td>10/16/2022</td>
+                <td>3pm</td>
+
+                <td class="font-center">
+                  <button aria-label="btn">
+                    <i class="uil-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <button aria-label="btn">
+                    <i class="uil-copy m-auto font-sm cursor-pointer"></i>
+                  </button>
+                  <span>1873376</span>
+                </td>
+                <td>Gary</td>
+                <td>Torres</td>
+                <td>PST</td>
+                <td>done</td>
+                <td>left vm, sent SMS and WCA email</td>
+                <td>10/16/2022</td>
+                <td>3pm</td>
+
+                <td class="font-center">
+                  <button aria-label="btn">
+                    <i class="uil-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </container>
+    </main>
+    <footer class="bg-primary">
+      <section>
+        <container
+          class="container py-6x border-solid p-lg radius-lg border-muted"
+        >
+          @luhmllo
+        </container>
+      </section>
+    </footer>
+  </body>
+</html>

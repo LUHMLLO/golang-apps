@@ -1,0 +1,13 @@
+@use "../props" as *;
+
+@each $scale, $value in $scales {
+  .gap-#{$scale} {
+    gap: #{$value};
+  }
+  .gap-row-#{$scale} {
+    row-gap: #{$value};
+  }
+  .gap-column-#{$scale} {
+    column-gap: #{$value};
+  }
+}
