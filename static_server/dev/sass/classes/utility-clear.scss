@@ -1,7 +1,0 @@
-$clears: ("right", "left", "both" "none");
-
-@each $value in $clears {
-  .clear-#{$value} {
-    clear: #{$value};
-  }
-}

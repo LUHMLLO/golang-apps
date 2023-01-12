@@ -1,7 +1,0 @@
-$fits: ("cover", "contain", "fill", "scale-down", "none");
-
-@each $value in $fits {
-  .object-fit-#{$value} {
-    object-fit: #{$value};
-  }
-}

@@ -1,0 +1,229 @@
+@use "sass:color";
+
+/************************* declare mixins variables functions etc... *************************/
+
+@mixin breakpoint($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+
+/************************* declare props variables with sass maps *************************/
+
+$shades: (
+  "navy": #253d5b,
+  "blue": #006cf0,
+  "gunmetal": #2b303a,
+  "grayscale": #9e9e9e,
+  "graphite": #292929,
+  "mint": #51dba4,
+  "green": #59c559,
+  "leaf": #50c878,
+  "lime": #d1dc56,
+  "pear": #cdd945,
+  "yellow": #ffd61f,
+  "amber": #ebb447,
+  "orange": #d38e57,
+  "brown": #b18c65,
+  "tumbleweed": #c5a48a,
+  "red": #e62b1e,
+  "rose": #d55d71,
+  "dragonfruit": #d36582,
+  "pink": #d55d85,
+  "purple": #663365,
+  "grape": #b38cb4,
+  "violet": #6c5389,
+  "indigo": #6e00ff,
+  // "cream": "",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+);
+
+$colors-static: (
+  dark: var(--color-nay--10),
+  light: var(--color-nay--0),
+);
+$colors-system: (
+  error: var(--color-red--5),
+  info: var(--color-navy--0),
+  success: var(--color-green--5),
+  warning: var(--color-yellow--5),
+);
+$colors-theme: (
+  primary: var(--color-violet--9),
+  secondary: var(--color-grape--0),
+  tertiary: var(--color-violet--0),
+  accent: var(--color-grape--5),
+  complementary: var(--color-violet--5),
+  muted: var(--color-violet--8),
+);
+$colors-schemes: (
+  dark-primary: var(--color-dragonfruit--10),
+  dark-secondary: var(--color-dragonfruit--0),
+  dark-tertiary: var(--color-dragonfruit--2),
+  dark-accent: var(--color-dragonfruit--5),
+  dark-complementary: var(--dragonfruit--9),
+  dark-muted: var(--color-dragonfruit--9),
+  default-primary: var(--color-dragonfruit--10),
+  default-secondary: var(--color-dragonfruit--0),
+  default-tertiary: var(--color-dragonfruit--2),
+  default-accent: var(--color-dragonfruit--5),
+  default-complementary: var(--dragonfruit--9),
+  default-muted: var(--color-dragonfruit--9),
+  light-primary: var(--color-dragonfruit--10),
+  light-secondary: var(--color-dragonfruit--0),
+  light-tertiary: var(--color-dragonfruit--2),
+  light-accent: var(--color-dragonfruit--5),
+  light-complementary: var(--dragonfruit--9),
+  light-muted: var(--color-dragonfruit--9),
+);
+$colors-typography: (
+  heading: var(),
+  subheading: var(),
+  content: var(),
+  link: var(),
+  button: var(),
+);
+
+$resolutions: (
+  6xl: 500rem,
+  5xl: 437.5rem,
+  4xl: 375rem,
+  3xl: 312.5rem,
+  2xl: 250rem,
+
+  xl: 187.5rem,
+  lg: 125rem,
+  rg: 62.5rem,
+  md: 56.25rem,
+  sm: 50rem,
+  xs: 43.75rem,
+
+  2xs: 37.5rem,
+  3xs: 31.25rem,
+  4xs: 25rem,
+  5xs: 18.75rem,
+  6xs: 12.5rem,
+);
+
+$scales: (
+  6xl: clamp(88px, max(15.95px, 16.95px), 92px),
+  5xl: clamp(72px, max(15.95px, 16.95px), 88px),
+  4xl: clamp(64px, max(15.95px, 16.95px), 72px),
+  3xl: clamp(56px, max(15.95px, 16.95px), 64px),
+  2xl: clamp(48px, max(15.95px, 16.95px), 56px),
+  xl: clamp(32px, max(15.95px, 16.95px), 48px),
+  lg: clamp(24px, max(15.95px, 16.95px), 32px),
+  rg: clamp(16px, max(15.95px, 16.95px), 24px),
+  md: clamp(14px, max(15.95px, 16.95px), 16px),
+  sm: clamp(12px, max(15.95px, 16.95px), 14px),
+  xs: clamp(10px, max(15.95px, 16.95px), 12px),
+  2xs: clamp(8px, max(15.95px, 16.95px), 10px),
+  3xs: clamp(7px, max(15.95px, 16.95px), 8px),
+  4xs: clamp(5px, max(15.95px, 16.95px), 6px),
+  5xs: clamp(2px, max(15.95px, 16.95px), 3px),
+  6xs: clamp(1px, max(15.95px, 16.95px), 2px),
+  5: 0.3125rem,
+  4: 0.25rem,
+  3: 0.1875rem,
+  2: 0.125rem,
+  1: 0.0625rem,
+  0: 0,
+  auto: auto,
+);
+
+$fonts-weight: (
+  9: 900,
+  8: 800,
+  7: 700,
+  6: 600,
+  5: 500,
+  4: 400,
+  3: 300,
+  2: 200,
+  1: 100,
+);
+
+$fonts-family: (
+  family--sans: sans-serif,
+  family--mono: monospace,
+  family--serif: serif,
+);
+
+$fonts-settings: (
+  font--lineHeight: 1.5,
+  font--family: var(--family--sans),
+  font--size: 15px,
+  font--letterSpacing: 0,
+);
+
+$theme-options: (
+  border--color: var(--color-tertiary),
+  border--radius: var(--scale--sm),
+  border--style: solid,
+  border--width: var(--scale--2),
+  transition--duration: 250ms,
+  transition--settings: all 5s linear,
+);
+
+/************************* set props variables on root *************************/
+
+:root {
+  //
+  @each $shade, $value in $shades {
+    --color-#{$shade}--0: #{color.adjust($value, $lightness: 34%)};
+    --color-#{$shade}--1: #{color.adjust($value, $lightness: 28%)};
+    --color-#{$shade}--2: #{color.adjust($value, $lightness: 22%)};
+    --color-#{$shade}--3: #{color.adjust($value, $lightness: 16%)};
+    --color-#{$shade}--4: #{color.adjust($value, $lightness: 10%)};
+    --color-#{$shade}--5: #{$value};
+    --color-#{$shade}--6: #{color.adjust($value, $lightness: -10%)};
+    --color-#{$shade}--7: #{color.adjust($value, $lightness: -16%)};
+    --color-#{$shade}--8: #{color.adjust($value, $lightness: -22%)};
+    --color-#{$shade}--9: #{color.adjust($value, $lightness: -28%)};
+    --color-#{$shade}--10: #{color.adjust($value, $lightness: -34%)};
+  }
+  //
+  @each $color, $value in $colors-static {
+    --color-#{$color}: #{$value};
+  }
+  //
+  @each $color, $value in $colors-system {
+    --color-#{$color}: #{$value};
+  }
+  //
+  @each $color, $value in $colors-theme {
+    --color-#{$color}: #{$value};
+  }
+  //
+  @each $color, $value in $colors-schemes {
+    --color-#{$color}: #{$value};
+  }
+  //
+  @each $color, $value in $colors-typography {
+    --color-#{$color}: #{$value};
+  }
+  //
+  @each $resolution, $value in $resolutions {
+    --res--#{$resolution}: #{$value};
+  }
+  //
+  @each $scale, $value in $scales {
+    --scale--#{$scale}: #{$value};
+  }
+  //
+  @each $w, $value in $fonts-weight {
+    --weight--#{$w}: #{$value};
+  }
+  //
+  @each $name, $value in $fonts-family {
+    --#{$name}: #{$value};
+  }
+  //
+  @each $name, $value in $fonts-settings {
+    --#{$name}: #{$value};
+  }
+  //
+  @each $name, $value in $theme-options {
+    --#{$name}: #{$value};
+  }
+  //
+}

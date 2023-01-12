@@ -1,0 +1,21 @@
+@use "../props" as *;
+
+@each $value in ("solid", "dashed", "dotted", "double", "hidden", "none") {
+  .border-#{$value} {
+    border-style: #{$value};
+    border-width: var(--border--width);
+  }
+}
+
+@each $scale, $value in $scales {
+  .radius-#{$scale} {
+    border-radius: #{$value};
+  }
+  .border-#{$scale} {
+    border-width: #{$value};
+  }
+}
+
+.radius-round {
+  border-radius: 50%;
+}

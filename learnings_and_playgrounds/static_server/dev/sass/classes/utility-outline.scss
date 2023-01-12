@@ -1,0 +1,17 @@
+@use "../props" as *;
+
+@each $value in ("solid", "dashed", "dotted", "double", "hidden", "none") {
+  .outline-#{$value} {
+    outline-style: #{$value};
+    outline-width: var(--border--width);
+  }
+}
+
+@each $scale, $value in $scales {
+  .outline-offset--#{$scale} {
+    outline-offset: #{$value};
+  }
+  .outline-width--#{$scale} {
+    outline-width: #{$value};
+  }
+}

@@ -1,0 +1,12 @@
+$aspect-ratios: (
+  "auto": "auto",
+  "square": "1 / 1",
+  "photo": "4 / 3",
+  "video": "16 / 9",
+);
+
+@each $ratio, $value in $aspect-ratios {
+  .ratio-#{$ratio} {
+    aspect-ratio: #{$value};
+  }
+}

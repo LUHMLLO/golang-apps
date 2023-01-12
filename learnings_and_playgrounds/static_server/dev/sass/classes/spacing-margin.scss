@@ -1,0 +1,27 @@
+@use "../props" as *;
+
+@each $scale, $value in $scales {
+  .m-#{$scale} {
+    margin: #{$value};
+  }
+  .my-#{$scale} {
+    margin-top: #{$value};
+    margin-bottom: #{$value};
+  }
+  .mx-#{$scale} {
+    margin-right: #{$value};
+    margin-left: #{$value};
+  }
+  .mt-#{$scale} {
+    margin-top: #{$value};
+  }
+  .mr-#{$scale} {
+    margin-right: #{$value};
+  }
+  .mb-#{$scale} {
+    margin-bottom: #{$value};
+  }
+  .ml-#{$scale} {
+    margin-left: #{$value};
+  }
+}
