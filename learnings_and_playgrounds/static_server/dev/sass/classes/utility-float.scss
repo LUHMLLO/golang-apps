@@ -1,7 +1,0 @@
-$floats: ("right", "left", "none");
-
-@each $value in $floats {
-  .float-#{$value} {
-    float: #{$value};
-  }
-}
