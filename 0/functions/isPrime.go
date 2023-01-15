@@ -1,4 +1,4 @@
-package main
+package functions
 
 func isPrime(num int) bool {
 	for i := 2; i < num; i++ {
