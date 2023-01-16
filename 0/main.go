@@ -2,19 +2,16 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/LUHMLLO/project0/functions"
 )
 
 func main() {
 
-	var primes []int
+	test_variable_type := 3
 
-	for i := 2; i < 100; i++ {
-		if isPrime(i) {
-			primes = append(primes, i)
-		}
-	}
-
-	fmt.Println("Hello, I'm project 0")
-	fmt.Println("Primes[]int ", primes)
+	fmt.Println(functions.Works)
+	fmt.Println(functions.MaximumCount([]int{1, 2}))
+	fmt.Println(functions.IsString(test_variable_type))
 
 }
